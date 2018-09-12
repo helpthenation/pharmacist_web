@@ -1,0 +1,106 @@
+
+#sidebarCollapse.active, #sidebarCollapse_mob.active {
+    background-image: url('/theme_pharmacistplace/static/src/icon/Menu-Close.png');
+    /* transform: rotate(90deg); */
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+html, body{
+    height: unset;
+}
+body {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    transition: all 0.3s;
+    border-left: 1px solid #cccccc;
+    z-index: 1000;
+    background: white;
+}
+
+#sidebar.active {
+    margin-right: -300px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px 0px;
+    font-size: 1.1em;
+    display: block;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+#sidebar li {
+    border-bottom: 1px solid #cccccc;
+}
+
+#sidebar li:last-child {
+    border-bottom: none;
+}
+#sidebar li a.social-media-link{
+    padding: 10px;
+}
+#sidebar li:first-child a.social-media-link {
+    padding: 10px 10px 10px 0px;
+}
+#sidebar ul#sidebar_socail_links li {
+    border-bottom: none;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+/* @media (max-width: 768px) {
+    #sidebar {
+        margin-right: 0px;
+    }
+    #sidebar.active {
+        margin-right: -300px;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+} */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-right: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    #sidebar.active {
+        margin-right: -100%;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
